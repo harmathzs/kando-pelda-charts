@@ -139,14 +139,16 @@
 
 /* Content area with scroll, below navbars */
 .content-area {
-  margin-top: 104px; /* 56px + 48px navbars height */
+  margin-top: 104px;      /* space for fixed navbars */
   height: calc(100vh - 104px);
   overflow-y: auto;
   padding: 24px;
-  max-width: 1200px;
-  margin-left: auto;
+  width: 900px;          /* fixed width */
+  max-width: 900px;      /* prevent growing beyond fixed width */
+  margin-left: auto;     /* horizontally center inside viewport */
   margin-right: auto;
   background-color: #f5f9ff;
   box-shadow: inset 0 0 6px #cfd9ea;
   border-radius: 8px;
 }
+

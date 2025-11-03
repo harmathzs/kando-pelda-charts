@@ -47,7 +47,7 @@ function ContentArea({ children }) {
 }
 
 // Placeholder pages
-const DataPage = () => <h2>Data Page Content</h2>;
+const DataPage = () => <h2>Data</h2>;
 const RechartsPage = () => <h2>Recharts Charts Page</h2>;
 const GoogleChartsPage = () => <h2>Google Charts Page</h2>;
 const C3ChartsPage = () => <h2>C3.js Charts Page</h2>;
