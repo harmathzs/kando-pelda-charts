@@ -1,9 +1,9 @@
 /* TODO - npm i react-router-dom recharts react-google-charts c3 d3 */
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
 import { chartCommonData, COLORS } from "./modules/chart-common-data";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell, ReferenceLine } from 'recharts';
 
 // Main top menu bar
 function MainNav() {
@@ -48,6 +48,9 @@ function ContentArea({ children }) {
     </main>
   );
 }
+
+// math function to plot
+const f = x => (Math.sin(x) + 2.0*x) /x
 
 // Placeholder pages
 // TODO - outsource component
@@ -114,6 +117,28 @@ const RechartsPage = props => <>
           </Pie>
         </PieChart>
       </ResponsiveContainer>
+
+    {/* Plot f function: */}
+    <LineChart
+      style={{ width: '100%', maxWidth: '700px', height: '100%', maxHeight: '70vh', aspectRatio: 1.618 }}
+      responsive
+      data={props.mathPlotData}
+      margin={{
+        top: 5,
+        right: 0,
+        left: 0,
+        bottom: 5,
+      }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="label" />
+      <YAxis width="auto" />
+      <Tooltip />
+      <Legend />
+      <Line type="monotone" dataKey="value" stroke="#8884d8" activeDot={{ r: 3 }} />
+      <ReferenceLine y={2} stroke="red" />
+      <ReferenceLine x={0} stroke="blue" />
+    </LineChart>
 </>;
 // TODO - outsource component
 const GoogleChartsPage = () => <h2>Google Charts Page</h2>;
@@ -121,6 +146,13 @@ const GoogleChartsPage = () => <h2>Google Charts Page</h2>;
 const C3ChartsPage = () => <h2>C3.js Charts Page</h2>;
 
 export default function App() {
+  let _mathPlotData = []
+  for (let x=-8.0; x<=+65.0; x+=0.5) {
+    _mathPlotData.push({label: x, value: f(x)})
+  }
+
+  const [mathPlotData, setMathPlotData] = useState(_mathPlotData)
+
   return (
     <Router>
       <MainNav />
@@ -128,7 +160,7 @@ export default function App() {
       <ContentArea>
         <Routes>
           <Route path="/data" element={<DataPage />} />
-          <Route path="/charts/recharts" element={<RechartsPage />} />
+          <Route path="/charts/recharts" element={<RechartsPage mathPlotData={mathPlotData} />} />
           <Route path="/charts/google" element={<GoogleChartsPage />} />
           <Route path="/charts/c3" element={<C3ChartsPage />} />
           <Route path="*" element={<DataPage />} />
