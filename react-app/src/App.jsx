@@ -63,26 +63,19 @@ const f = x => (Math.sin(x) + 2.0*x) /x
 // Placeholder pages
 // TODO - outsource component
 const DataPage = () => <>
-  <h2>Data JSON</h2>
-  <p><strong>Title:</strong> {chartCommonData.title}</p>
+  <h2>Data</h2>
+  <p><strong>Title:</strong> TODO chartCommonData title</p>
   <p>
-    <table>
-      <tr>
-        <th>Country</th>
-        <th>Unemployment rate [%]</th>
-      </tr>
-      {chartCommonData.data.map( ({label, value})=><tr key={label}>
-        <td>{label}</td>
-        <td>{value}</td>
-      </tr> )}
-    </table>
+    TODO table<br />
+    TODO header cells: Country, Unemployment rate [%]<br />
+    TODO body cells: chartCommonData data label, value<br />
   </p>
 </>;
 // TODO - outsource component
 const RechartsPage = props => <>
  <h2>React Charts Page</h2>
     <div>TODO - draw Recharts LineChart</div>
-    
+
     <div>TODO - draw Recharts BarChart</div>
 
     <div>TODO - draw Recharts PieChart in responsive container, colored by COLORS</div>
