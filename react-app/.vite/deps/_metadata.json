@@ -2,45 +2,54 @@
   "hash": "a1847e2a",
   "configHash": "52f7ecb5",
   "lockfileHash": "fe197da0",
-  "browserHash": "7eb77d64",
+  "browserHash": "362ed8c3",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "9c052b28",
+      "fileHash": "b9aeefdf",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "d96a52e4",
+      "fileHash": "9c20a7c8",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "33c403cb",
+      "fileHash": "67895511",
       "needsInterop": false
     },
     "recharts": {
       "src": "../../node_modules/recharts/es6/index.js",
       "file": "recharts.js",
-      "fileHash": "e105fb15",
+      "fileHash": "f377980a",
       "needsInterop": false
     },
     "react-google-charts": {
       "src": "../../node_modules/react-google-charts/dist/index.js",
       "file": "react-google-charts.js",
-      "fileHash": "d0d36576",
+      "fileHash": "8b0257e1",
       "needsInterop": false
+    },
+    "c3": {
+      "src": "../../node_modules/c3/c3.js",
+      "file": "c3.js",
+      "fileHash": "e7708cc1",
+      "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-UQ26FQ3S": {
-      "file": "chunk-UQ26FQ3S.js"
+    "chunk-JTQON3PF": {
+      "file": "chunk-JTQON3PF.js"
     },
-    "chunk-7S7MPZBM": {
-      "file": "chunk-7S7MPZBM.js"
+    "chunk-4ONE3NUP": {
+      "file": "chunk-4ONE3NUP.js"
+    },
+    "chunk-LK32TJAX": {
+      "file": "chunk-LK32TJAX.js"
     }
   }
 }
