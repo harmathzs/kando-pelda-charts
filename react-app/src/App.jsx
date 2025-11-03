@@ -159,7 +159,7 @@ const GoogleChartsPage = props => <>
 // TODO - outsource component
 const C3ChartsPage = props => <>
   <h2>C3.js Charts Page</h2>
-  <C3LineChart />
+  <C3LineChart chartCommonData={chartCommonData} />
 </>;
 
 export default function App() {
