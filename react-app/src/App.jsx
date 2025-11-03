@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react
 import "./App.css";
 import { chartCommonData, COLORS } from "./modules/chart-common-data";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell, ReferenceLine } from 'recharts';
+import { Chart } from "react-google-charts";
 
 // Main top menu bar
 function MainNav() {
@@ -141,7 +142,17 @@ const RechartsPage = props => <>
     </LineChart>
 </>;
 // TODO - outsource component
-const GoogleChartsPage = () => <h2>Google Charts Page</h2>;
+const GoogleChartsPage = props => <>
+ <h2>Google Charts Page</h2>
+ <Chart
+      chartType="LineChart"
+      width="100%"
+      height="100%"
+      data={[['country', 'rate'], ...chartCommonData.data.map(({label, value})=>[label, value])]}
+      options={{title: 'Line chart', legend: {position: 'bottom'}}}
+      legendToggle
+    />
+</>;
 // TODO - outsource component
 const C3ChartsPage = () => <h2>C3.js Charts Page</h2>;
 

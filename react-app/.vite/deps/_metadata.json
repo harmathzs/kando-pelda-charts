@@ -2,30 +2,36 @@
   "hash": "a1847e2a",
   "configHash": "52f7ecb5",
   "lockfileHash": "fe197da0",
-  "browserHash": "0b8295d7",
+  "browserHash": "7eb77d64",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "d7d251dc",
+      "fileHash": "9c052b28",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "f35fd580",
+      "fileHash": "d96a52e4",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "dbec83ff",
+      "fileHash": "33c403cb",
       "needsInterop": false
     },
     "recharts": {
       "src": "../../node_modules/recharts/es6/index.js",
       "file": "recharts.js",
-      "fileHash": "5d0255b8",
+      "fileHash": "e105fb15",
+      "needsInterop": false
+    },
+    "react-google-charts": {
+      "src": "../../node_modules/react-google-charts/dist/index.js",
+      "file": "react-google-charts.js",
+      "fileHash": "d0d36576",
       "needsInterop": false
     }
   },
