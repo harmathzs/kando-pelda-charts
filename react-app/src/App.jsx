@@ -1,3 +1,4 @@
+/* TODO - npm i react-router-dom recharts react-google-charts c3 d3 */
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
@@ -48,6 +49,7 @@ function ContentArea({ children }) {
 }
 
 // Placeholder pages
+// TODO - outsource component
 const DataPage = () => <>
   <h2>Data JSON</h2>
   <p><strong>Title:</strong> {chartCommonData.title}</p>
@@ -64,8 +66,11 @@ const DataPage = () => <>
     </table>
   </p>
 </>;
-const RechartsPage = () => <h2>Recharts Charts Page</h2>;
+// TODO - outsource component
+const RechartsPage = () => <h2>React Charts Page</h2>;
+// TODO - outsource component
 const GoogleChartsPage = () => <h2>Google Charts Page</h2>;
+// TODO - outsource component
 const C3ChartsPage = () => <h2>C3.js Charts Page</h2>;
 
 export default function App() {
