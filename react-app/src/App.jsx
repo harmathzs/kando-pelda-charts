@@ -1,21 +1,21 @@
-/* TODO - npm i react-router-dom recharts react-google-charts c3 d3 */
+/* TODO - npm install react-router-dom recharts react-google-charts c3 d3 */
 
-/* React Charts (ReCharts): https://recharts.github.io/ */
-/* React Google Charts: https://www.react-google-charts.com/ */
-/* C3 (D3): https://c3js.org/ */
+/* TODO - read about React Charts (ReCharts): https://recharts.github.io/ */
+/* TODO - read about React Google Charts: https://www.react-google-charts.com/ */
+/* TODO - read about C3 (D3): https://c3js.org/ */
 
 
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
-import { chartCommonData, COLORS } from "./modules/chart-common-data";
+// TODO import chartCommonData, COLORS
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell, ReferenceLine } from 'recharts';
 import { Chart } from "react-google-charts";
 import C3LineChart from "./components/C3LineChart/C3LineChart";
 
 // Main top menu bar
 function MainNav() {
-  const location = useLocation();
+  const location = useLocation(); // TODO - read about useLocation() react hook on the internet
   const isCharts = location.pathname.startsWith("/charts");
   return (
     <nav className="main-nav">
@@ -32,7 +32,7 @@ function MainNav() {
 
 // Second menu bar under charts only
 function ChartsSubNav() {
-  const location = useLocation();
+  const location = useLocation(); 
   if (!location.pathname.startsWith("/charts")) return null;
 
   return (
@@ -58,7 +58,7 @@ function ContentArea({ children }) {
 }
 
 // math function to plot
-const f = x => (Math.sin(x) + 2.0*x) /x
+const f = x => x // TODO - function returns ( sin(x) + 2x ) / x
 
 // Placeholder pages
 // TODO - outsource component
