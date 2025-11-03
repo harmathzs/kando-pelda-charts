@@ -57,7 +57,7 @@ const f = x => (Math.sin(x) + 2.0*x) /x
 // Placeholder pages
 // TODO - outsource component
 const DataPage = () => <>
-  <h2>Data JSON</h2>
+  <h2>Data</h2>
   <p><strong>Title:</strong> {chartCommonData.title}</p>
   <p>
     <table>
