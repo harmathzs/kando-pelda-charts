@@ -152,6 +152,7 @@ const GoogleChartsPage = props => <>
       options={{title: 'Line chart', legend: {position: 'bottom'}}}
       legendToggle
     />
+  <Chart chartType="ColumnChart" width="100%" height="100%" data={[['country', 'rate'], ...chartCommonData.data.map(({label, value})=>[label, value])]} />
 </>;
 // TODO - outsource component
 const C3ChartsPage = () => <h2>C3.js Charts Page</h2>;
@@ -170,11 +171,11 @@ export default function App() {
       <ChartsSubNav />
       <ContentArea>
         <Routes>
-          <Route path="/data" element={<DataPage />} />
+          <Route path="/data" element={<DataPage mathPlotData={mathPlotData} />} />
           <Route path="/charts/recharts" element={<RechartsPage mathPlotData={mathPlotData} />} />
-          <Route path="/charts/google" element={<GoogleChartsPage />} />
-          <Route path="/charts/c3" element={<C3ChartsPage />} />
-          <Route path="*" element={<DataPage />} />
+          <Route path="/charts/google" element={<GoogleChartsPage mathPlotData={mathPlotData} />} />
+          <Route path="/charts/c3" element={<C3ChartsPage mathPlotData={mathPlotData} />} />
+          <Route path="*" element={<DataPage mathPlotData={mathPlotData} />} />
         </Routes>
       </ContentArea>
     </Router>
