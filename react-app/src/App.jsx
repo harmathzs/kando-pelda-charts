@@ -2,8 +2,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
-import { chartCommonData } from "./modules/chart-common-data";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle } from 'recharts';
+import { chartCommonData, COLORS } from "./modules/chart-common-data";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell } from 'recharts';
 
 // Main top menu bar
 function MainNav() {
@@ -106,6 +106,14 @@ const RechartsPage = props => <>
       <Legend />
       <Bar dataKey="value" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
     </BarChart>
+
+    <ResponsiveContainer>
+        <PieChart>
+          <Pie dataKey="value" data={chartCommonData.data} fill="#8884d8" label >
+            {chartCommonData.data.map((entry, idx)=><Cell key={entry.label} fill={COLORS[idx % COLORS.length]} />)}
+          </Pie>
+        </PieChart>
+      </ResponsiveContainer>
 </>;
 // TODO - outsource component
 const GoogleChartsPage = () => <h2>Google Charts Page</h2>;
