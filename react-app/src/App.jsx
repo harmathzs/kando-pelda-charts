@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
 import { chartCommonData } from "./modules/chart-common-data";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 // Main top menu bar
 function MainNav() {
@@ -67,7 +68,27 @@ const DataPage = () => <>
   </p>
 </>;
 // TODO - outsource component
-const RechartsPage = () => <h2>React Charts Page</h2>;
+const RechartsPage = props => <>
+ <h2>React Charts Page</h2>
+    <LineChart
+      style={{ width: '100%', maxWidth: '700px', height: '100%', maxHeight: '70vh', aspectRatio: 1.618 }}
+      responsive
+      data={chartCommonData.data}
+      margin={{
+        top: 5,
+        right: 0,
+        left: 0,
+        bottom: 5,
+      }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="label" padding={{left: 30}} />
+      <YAxis width="auto" />
+      <Tooltip />
+      <Legend />
+      <Line type="linear" dataKey="value" stroke="#8884d8" activeDot={{ r: 8 }} />
+    </LineChart>
+</>;
 // TODO - outsource component
 const GoogleChartsPage = () => <h2>Google Charts Page</h2>;
 // TODO - outsource component

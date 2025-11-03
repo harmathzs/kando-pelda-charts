@@ -2,33 +2,39 @@
   "hash": "a1847e2a",
   "configHash": "52f7ecb5",
   "lockfileHash": "fe197da0",
-  "browserHash": "e947684d",
+  "browserHash": "0b8295d7",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "5ac81987",
+      "fileHash": "d7d251dc",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "3f296234",
+      "fileHash": "f35fd580",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "c6927c4c",
+      "fileHash": "dbec83ff",
+      "needsInterop": false
+    },
+    "recharts": {
+      "src": "../../node_modules/recharts/es6/index.js",
+      "file": "recharts.js",
+      "fileHash": "5d0255b8",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-QS7ZE27V": {
-      "file": "chunk-QS7ZE27V.js"
+    "chunk-UQ26FQ3S": {
+      "file": "chunk-UQ26FQ3S.js"
     },
-    "chunk-OBOR3357": {
-      "file": "chunk-OBOR3357.js"
+    "chunk-7S7MPZBM": {
+      "file": "chunk-7S7MPZBM.js"
     }
   }
 }
