@@ -1,0 +1,159 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+
+
+/* Reset margins and paddings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main blue navbar fixed top */
+.main-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background-color: #0056b3; /* Dark blue */
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.main-nav .nav-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav .brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.main-nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 24px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.main-nav .nav-links a:hover {
+  background-color: #003d7a;
+}
+
+.main-nav .nav-links a.active {
+  background-color: #002a56;
+}
+
+/* Sub navigation bar below main */
+.sub-nav {
+  position: fixed;
+  top: 56px;
+  left: 0; right: 0;
+  height: 48px;
+  background-color: #2176bd; /* Medium blue */
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.sub-nav .nav-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: auto;
+  display: flex;
+}
+
+.sub-nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 24px;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.sub-nav .nav-links a:hover {
+  background-color: #0f4b81;
+}
+
+.sub-nav .nav-links a.active {
+  background-color: #0a2b4a;
+}
+
+/* Content area with scroll, below navbars */
+.content-area {
+  margin-top: 104px;      /* space for fixed navbars */
+  height: calc(100vh - 104px);
+  overflow-y: auto;
+  padding: 24px;
+  width: 900px;          /* fixed width */
+  max-width: 900px;      /* prevent growing beyond fixed width */
+  margin-left: auto;     /* horizontally center inside viewport */
+  margin-right: auto;
+  background-color: #f5f9ff;
+  box-shadow: inset 0 0 6px #cfd9ea;
+  border-radius: 8px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
