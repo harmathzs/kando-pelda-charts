@@ -8,7 +8,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
-import fgraphStatic from './assets/fgraphStatic.png';
+// TODO import fgraphStatic image
 // TODO import chartCommonData, COLORS
 // TODO import LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell, ReferenceLine from Recharts
 // TODO import Chart from React-Google-Charts
@@ -72,7 +72,7 @@ const DataPage = () => <>
     TODO body cells: chartCommonData data label, value<br />
   </p>
   <p>
-    <img src={fgraphStatic} alt="fgraphStatic.png" />
+    <img src="TODO fgraphStatic" alt="fgraphStatic.png" />
   </p>
 </>;
 // TODO - outsource component
