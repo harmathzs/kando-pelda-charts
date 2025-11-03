@@ -8,4 +8,7 @@ var chartCommonData = {
         {label: 'Spain', value: 11},
     ],
 }
-export {chartCommonData}
+
+var COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF00FF']
+
+export {chartCommonData, COLORS}
