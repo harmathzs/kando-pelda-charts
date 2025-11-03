@@ -132,10 +132,10 @@ const RechartsPage = props => <>
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="label" />
-      <YAxis width="auto" />
+      <YAxis width="auto" domain={[1.5, 3.2]} />
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="value" stroke="#8884d8" activeDot={{ r: 3 }} />
+      <Line type="monotone" dataKey="value" stroke="#8884d8" />
       <ReferenceLine y={2} stroke="red" />
       <ReferenceLine x={0} stroke="blue" />
     </LineChart>
