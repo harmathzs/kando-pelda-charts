@@ -143,17 +143,16 @@
   height: calc(100vh - 104px);
   overflow-y: auto;
   padding: 24px;
-  width: 900px;          /* fixed width */
-  max-width: 900px;      /* prevent growing beyond fixed width */
+  /* TODO - fix width */
+  /* TODO - prevent growing beyond fixed width */
   margin-left: auto;     /* horizontally center inside viewport */
   margin-right: auto;
-  background-color: #f5f9ff;
+  /* TODO - set background color to F5F9FF */
   box-shadow: inset 0 0 6px #cfd9ea;
-  border-radius: 8px;
+  /* TODO - add some border radius */
 }
 
 table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+  /* TODO - add table cell borders */
   padding: 5px;
 }
