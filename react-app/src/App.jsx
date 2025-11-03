@@ -48,7 +48,22 @@ function ContentArea({ children }) {
 }
 
 // Placeholder pages
-const DataPage = () => <h2>Data</h2>;
+const DataPage = () => <>
+  <h2>Data JSON</h2>
+  <p><strong>Title:</strong> {chartCommonData.title}</p>
+  <p>
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>Unemployment rate [%]</th>
+      </tr>
+      {chartCommonData.data.map( ({label, value})=><tr key={label}>
+        <td>{label}</td>
+        <td>{value}</td>
+      </tr> )}
+    </table>
+  </p>
+</>;
 const RechartsPage = () => <h2>Recharts Charts Page</h2>;
 const GoogleChartsPage = () => <h2>Google Charts Page</h2>;
 const C3ChartsPage = () => <h2>C3.js Charts Page</h2>;
