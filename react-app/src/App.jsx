@@ -152,7 +152,8 @@ const GoogleChartsPage = props => <>
       options={{title: 'Line chart', legend: {position: 'bottom'}}}
       legendToggle
     />
-  <Chart chartType="ColumnChart" width="100%" height="100%" data={[['country', 'rate'], ...chartCommonData.data.map(({label, value})=>[label, value])]} />
+  <Chart chartType="ColumnChart" width="100%" height="100%" data={[['country', 'rate'], ...chartCommonData.data.map(({label, value})=>[label, value])]} options={{title: 'Column bar chart', legend: {position: 'bottom'}}} />
+  <Chart chartType="PieChart" width="100%" height="100%" data={[['country', 'rate'], ...chartCommonData.data.map(({label, value})=>[label, value])]} options={{title: 'Pie chart', legend: {position: 'bottom'}}} />
 </>;
 // TODO - outsource component
 const C3ChartsPage = () => <h2>C3.js Charts Page</h2>;
