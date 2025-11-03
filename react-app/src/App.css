@@ -40,3 +40,113 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+
+/* Reset margins and paddings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main blue navbar fixed top */
+.main-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background-color: #0056b3; /* Dark blue */
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.main-nav .nav-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav .brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.main-nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 24px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.main-nav .nav-links a:hover {
+  background-color: #003d7a;
+}
+
+.main-nav .nav-links a.active {
+  background-color: #002a56;
+}
+
+/* Sub navigation bar below main */
+.sub-nav {
+  position: fixed;
+  top: 56px;
+  left: 0; right: 0;
+  height: 48px;
+  background-color: #2176bd; /* Medium blue */
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.sub-nav .nav-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: auto;
+  display: flex;
+}
+
+.sub-nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 24px;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.sub-nav .nav-links a:hover {
+  background-color: #0f4b81;
+}
+
+.sub-nav .nav-links a.active {
+  background-color: #0a2b4a;
+}
+
+/* Content area with scroll, below navbars */
+.content-area {
+  margin-top: 104px; /* 56px + 48px navbars height */
+  height: calc(100vh - 104px);
+  overflow-y: auto;
+  padding: 24px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f5f9ff;
+  box-shadow: inset 0 0 6px #cfd9ea;
+  border-radius: 8px;
+}
