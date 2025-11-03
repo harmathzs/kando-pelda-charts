@@ -1,4 +1,10 @@
 /* TODO - npm i react-router-dom recharts react-google-charts c3 d3 */
+
+/* React Charts (ReCharts): https://recharts.github.io/ */
+/* React Google Charts: https://www.react-google-charts.com/ */
+/* C3 (D3): https://c3js.org/ */
+
+
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
@@ -75,98 +81,31 @@ const DataPage = () => <>
 // TODO - outsource component
 const RechartsPage = props => <>
  <h2>React Charts Page</h2>
-    <LineChart
-      style={{ width: '100%', maxWidth: '700px', height: '100%', maxHeight: '70vh', aspectRatio: 1.618 }}
-      responsive
-      data={chartCommonData.data}
-      margin={{
-        top: 5,
-        right: 0,
-        left: 0,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="label" padding={{left: 30}} />
-      <YAxis width="auto" />
-      <Tooltip />
-      <Legend />
-      <Line type="linear" dataKey="value" stroke="#8884d8" activeDot={{ r: 8 }} />
-    </LineChart>
-    <BarChart
-      style={{ width: '100%', maxWidth: '700px', maxHeight: '70vh', aspectRatio: 1.618 }}
-      responsive
-      data={chartCommonData.data}
-      margin={{
-        top: 5,
-        right: 0,
-        left: 0,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="label" />
-      <YAxis width="auto" />
-      <Tooltip />
-      <Legend />
-      <Bar dataKey="value" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
-    </BarChart>
+    <div>TODO - draw Recharts LineChart</div>
+    
+    <div>TODO - draw Recharts BarChart</div>
 
-    <ResponsiveContainer>
-        <PieChart>
-          <Pie dataKey="value" data={chartCommonData.data} fill="#8884d8" label >
-            {chartCommonData.data.map((entry, idx)=><Cell key={entry.label} fill={COLORS[idx % COLORS.length]} />)}
-          </Pie>
-        </PieChart>
-      </ResponsiveContainer>
+    <div>TODO - draw Recharts PieChart in responsive container, colored by COLORS</div>
 
     {/* Plot f function: */}
-    <LineChart
-      style={{ width: '100%', maxWidth: '700px', height: '100%', maxHeight: '70vh', aspectRatio: 1.618 }}
-      responsive
-      data={props.mathPlotData}
-      margin={{
-        top: 5,
-        right: 0,
-        left: 0,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="label" />
-      <YAxis width="auto" domain={[1.5, 3.2]} />
-      <Tooltip />
-      <Legend />
-      <Line type="monotone" dataKey="value" stroke="#8884d8" />
-      <ReferenceLine y={2} stroke="red" />
-      <ReferenceLine x={0} stroke="blue" />
-    </LineChart>
+    <div>TODO - plot f function by 1.5...3.2 domain and limes line</div>
 </>;
 // TODO - outsource component
 const GoogleChartsPage = props => <>
  <h2>Google Charts Page</h2>
- <Chart
-      chartType="LineChart"
-      width="100%"
-      height="100%"
-      data={[['country', 'rate'], ...chartCommonData.data.map(({label, value})=>[label, value])]}
-      options={{title: 'Line chart', legend: {position: 'bottom'}}}
-      legendToggle
-    />
-  <Chart chartType="ColumnChart" width="100%" height="100%" data={[['country', 'rate'], ...chartCommonData.data.map(({label, value})=>[label, value])]} options={{title: 'Column bar chart', legend: {position: 'bottom'}}} />
-  <Chart chartType="PieChart" width="100%" height="100%" data={[['country', 'rate'], ...chartCommonData.data.map(({label, value})=>[label, value])]} options={{title: 'Pie chart', legend: {position: 'bottom'}}} />
-</>;
+ <div>TODO - insert Google LineChart with chartCommonData data</div>
+ <div>TODO - insert Google column bar chart with chartCommonData data</div>
+ <div>TODO - insert Google PieChart with chartCommonData data</div>
+ </>;
 // TODO - outsource component
 const C3ChartsPage = props => <>
   <h2>C3.js Charts Page</h2>
-  <C3LineChart chartCommonData={chartCommonData} />
+  <C3LineChart todo="pass chartCommonData" />
 </>;
 
 export default function App() {
   let _mathPlotData = []
-  for (let x=-8.0; x<=+65.0; x+=0.5) {
-    _mathPlotData.push({label: x, value: f(x)})
-  }
+  /* TODO - prepare array for plotting function properly */
 
   const [mathPlotData, setMathPlotData] = useState(_mathPlotData)
 
@@ -176,11 +115,11 @@ export default function App() {
       <ChartsSubNav />
       <ContentArea>
         <Routes>
-          <Route path="/data" element={<DataPage mathPlotData={mathPlotData} />} />
-          <Route path="/charts/recharts" element={<RechartsPage mathPlotData={mathPlotData} />} />
-          <Route path="/charts/google" element={<GoogleChartsPage mathPlotData={mathPlotData} />} />
-          <Route path="/charts/c3" element={<C3ChartsPage mathPlotData={mathPlotData} />} />
-          <Route path="*" element={<DataPage mathPlotData={mathPlotData} />} />
+          <Route path="/data" element={<DataPage todo="pass mathPlotData" />} />
+          <Route path="/charts/recharts" element={<RechartsPage todo="pass mathPlotData" />} />
+          <Route path="/charts/google" element={<GoogleChartsPage todo="pass mathPlotData" />} />
+          <Route path="/charts/c3" element={<C3ChartsPage todo="pass mathPlotData" />} />
+          <Route path="*" element={<DataPage todo="pass mathPlotData" />} />
         </Routes>
       </ContentArea>
     </Router>
